@@ -96,14 +96,15 @@ except ModuleNotFoundError:
               + "python3 -m pip install colorama")
         install("python-telegram-bot")
 try:
-    import requests
+        import requests
+        
 except ModuleNotFoundError:
-    print("telegram-bot is not installed. "
+
+        print("requests"
               + "Miner will try to automatically install it "
               + "If it fails, please manually execute "
               + "python3 -m pip install colorama")
-    install("requests")
-
+        install("requests")
 try:
         import cpuinfo
 except ModuleNotFoundError:
