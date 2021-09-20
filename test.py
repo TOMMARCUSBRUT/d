@@ -1,5 +1,4 @@
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-import logging
+
 
 # !/usr/bin/env python3
 """
@@ -36,6 +35,8 @@ from platform import machine as osprocessor
 from signal import SIGINT, signal
 from locale import LC_ALL, getdefaultlocale, getlocale, setlocale
 from configparser import ConfigParser
+#from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+import logging
 
 configparser = ConfigParser()
 
@@ -77,16 +78,25 @@ try:
         from colorama import Back, Fore, Style, init
         init(autoreset=True)
 except ModuleNotFoundError:
-#        context.bot.send_message(chat_id=update.effective_chat.id,
- #                                text="Colorama is not installed. "
-  #                                    + "Miner will try to automatically install it "
-   #                                   + "If it fails, please manually execute "
-    #                                  + "python3 -m pip install colorama")
+
         print("Colorama is not installed. "
               + "Miner will try to automatically install it "
               + "If it fails, please manually execute "
               + "python3 -m pip install colorama")
         install("colorama")
+
+try:
+        from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+        
+except ModuleNotFoundError:
+
+        print("telegram-bot is not installed. "
+              + "Miner will try to automatically install it "
+              + "If it fails, please manually execute "
+              + "python3 -m pip install colorama")
+        install("python-telegram-bot")
+
+
 
 try:
         import cpuinfo
