@@ -102,7 +102,7 @@ except ModuleNotFoundError:
               + "Miner will try to automatically install it "
               + "If it fails, please manually execute "
               + "python3 -m pip install colorama")
-        install("requests")
+    install("requests")
 
 try:
         import cpuinfo
