@@ -927,7 +927,7 @@ def mine(update, context):
 
 mine_handler = CommandHandler("mine", mine)
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
-updater = Updater(token='1911449860:AAF-_FkGYlJAEHLtpsgtMeinAvTu4Z9Uj2w', use_context=True)
+updater = Updater(token='1911449860:AAFTE5qty1wmUuiwaFPzE8we8VY0giG8J8I', use_context=True)
 dispatcher = updater.dispatcher
 # start_handler = CommandHandler('start', start)
 
