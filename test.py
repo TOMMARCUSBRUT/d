@@ -26,7 +26,7 @@ import sys
 import os
 import json
 
-import requests
+#import requests
 from pathlib import Path
 from re import sub
 from random import choice
@@ -95,8 +95,14 @@ except ModuleNotFoundError:
               + "If it fails, please manually execute "
               + "python3 -m pip install colorama")
         install("python-telegram-bot")
-
-
+try:
+    import requests
+except ModuleNotFoundError:
+    print("telegram-bot is not installed. "
+              + "Miner will try to automatically install it "
+              + "If it fails, please manually execute "
+              + "python3 -m pip install colorama")
+        install("requests")
 
 try:
         import cpuinfo
